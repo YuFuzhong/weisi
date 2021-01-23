@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>we travel</title>
+</head>
+<body id="head">
+</body>
+<script>
+    //背景图的切换
+	window.onload = function () {
+		var i = 0;
+        var photo = ["photos/a1.jpg", "photos/a2.jpg", "photos/a3.jpg", "photos/a4.jpg", "photos/a5.jpg", "photos/a6.jpg", 
+        "photos/a7.jpg", "photos/a8.jpg", "photos/a9.jpg", "photos/a10.jpg", "photos/a11.jpg", "photos/a12.jpg", 
+        "photos/a13.jpg", "photos/a14.jpg", "photos/a15.jpg", "photos/a16.jpg", "photos/a17.jpg", "photos/a18.jpg", 
+        "photos/a19.jpg", "photos/a20.jpg", "photos/a21.jpg", "photos/a22.jpg", "photos/a23.jpg", "photos/a24.jpg", 
+        "photos/a25.jpg", "photos/a26.jpg", "photos/a27.jpg", "photos/a28.jpg", "photos/a29.jpg", "photos/a30.jpg", 
+        "photos/a31.jpg", "photos/a32.jpg", "photos/a33.jpg", "photos/a34.jpg", "photos/a35.jpg", "photos/a36.jpg", 
+        "photos/b1.jpg", "photos/b2.jpg", "photos/b3.jpg", "photos/b4.jpg", "photos/b5.jpg", "photos/b6.jpg", 
+        "photos/b7.jpg", "photos/b8.jpg", "photos/b9.jpg", "photos/b10.jpg", "photos/b11.jpg", "photos/b12.jpg",
+        "photos/b13.jpg", "photos/b14.jpg", "photos/b15.jpg", "photos/b16.jpg",
+        "photos/c1.jpg", "photos/c2.jpg", "photos/c3.jpg", "photos/c4.jpg", "photos/c5.jpg", "photos/c6.jpg",
+        "photos/c7.jpg", "photos/c8.jpg"];
+		var head = document.getElementById("head");//获取DIV对象
+		head.style.background = "url(photos/a1.jpg)";
+		function time() {
+			i++;
+			i = i % 61;
+			head.style.background = "url(" + photo[i] + ")";
+		}
+		setInterval(time, 5000);
+		//循环调用time1()函数，时间间隔为5000ms
+		//setInterval()函数，按照指定的周期（按毫秒计）来调用函数或表达式
+	}
+</script>
+</html>
